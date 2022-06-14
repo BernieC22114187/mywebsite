@@ -1,0 +1,23 @@
+.learnMore{
+    font-family: Georgia, sans-serif;
+    color: black;
+    font-size: 10px;
+    margin-left: 29;
+}
+.cardcontent{
+    align-content: center;
+}
+.cardtitle{
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-family: Georgia, sans-serif;
+    color: black;
+    
+}
+.description{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    text-align:left;
+}
