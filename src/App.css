@@ -1,12 +1,15 @@
 .App {
   text-align: center;
+  
 }
 
-.projects{
-  font-size: 30px;
-}
 .header{
+  
   display: flex;
   flex-direction: row;
   
+}
+.body{
+  display: flex;
+  justify-content: center;
 }
