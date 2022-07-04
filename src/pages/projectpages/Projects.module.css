@@ -1,0 +1,149 @@
+.top{
+    width: 100vw;
+    
+    background-color: #14213D;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1vh;
+    
+}
+.title{
+    font-size: 85px;
+    color: white;
+    font-family: "Yellowtail";
+    margin-bottom: 1vh;
+    font-weight: 400;
+}
+.courseButton{
+    height: 5vh;
+    background-color: #FF9E00;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: "Poppins";
+    
+}
+.projectHeading{
+
+    width: 75vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.projectName{
+    font-family: "Yellowtail";
+    font-size: 40px;
+    font-weight: 400;
+}
+.projectList{
+    font-size: 18px;
+    width: 15vw;
+    /* height: 3vh; */
+}
+.wholepage{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.courseFooter{
+    height: 40vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+
+}
+.courseDescriptionTitle{
+    height: 20%;
+    width: 375px;
+    font-size: 40px;
+    border-radius: 10px;
+    margin-bottom: -25px;
+    font-weight: 600;
+    background-color: #FF9E00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+.courseDescription{
+    background-color: #E2E2E2 ;
+    font-size: 20px;
+    /* height: 80%; */
+    padding:40px 40px;
+    text-align: left;
+    
+}
+.projectInfo{
+    width: 75vw;
+}
+
+.projectDescription{
+    background-color: #E2E2E2;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+
+    
+}
+.blockTitle{
+    font-family: "Yellowtail";
+    font-size: 30px;
+    height: relative;
+    
+}
+.descriptionSection{
+    display: flex;
+    margin-top: 20px;
+}
+.descriptionImage{
+    /* display: flex; */
+
+    flex: 1;
+}
+.projectDescriptionText{
+    display:flex;
+    flex: 1;
+    text-align: left;
+    font-size: 22px;
+}
+
+.verticalBlock{
+    background-color: #E2E2E2;
+    border-radius: 10px;
+    /* width: 100%; */
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    
+}
+.verticSection{
+    display: flex;
+    flex-direction:column;
+    margin-top: 20px;
+}
+.verticalImage{
+    height: 50vh;
+}
