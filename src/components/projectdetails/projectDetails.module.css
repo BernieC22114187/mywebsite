@@ -1,0 +1,73 @@
+.projectInfo{
+    width: 75vw !important;
+}
+
+.projectDescription{
+    background-color: #E2E2E2;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column!important;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+
+    
+}
+.blockTitle{
+    font-family: "Yellowtail";
+    font-size: 30px;
+    height: relative;
+    
+}
+.descriptionSection{
+    display: flex;
+    width: 100%;
+    flex-direction: row ;
+    margin-top: 20px;
+}
+.descriptionImage{
+    /* display: flex; */
+
+    flex: 1;
+}
+.projectDescriptionText{
+    display:flex;
+    flex: 1 ;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Poly"
+}
+
+.verticalBlock{
+    background-color: #E2E2E2;
+    border-radius: 10px;
+   
+    /* width: 100%; */
+    /* height: 50vh; */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px !important;
+    height: 120vh;
+    
+    
+}
+.verticalSection{
+    display: flex ;
+    flex-direction:column;
+    margin-top: 20px;
+    height: 100%;
+}
+.verticalImage{
+    flex: 1 1 auto!important;
+}
+

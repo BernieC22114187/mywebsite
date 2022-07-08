@@ -1,124 +1,76 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import ProjectsCss from "./Projects.module.css";
 import Grid from "@mui/material/Grid";
-const Projects = () => {
+import ProjectDetails from "../../components/projectdetails/projectDetails.jsx";
+import {aiProjects, modernTopics} from "../../components/projectDictionaries";
+const Projects = ({pageTitle, pageDescriptionName, pageDescriptionText}) => {
+  var projDetails = [];
+  if (pageTitle === "Honors AI Projects"){
+    projDetails = aiProjects;
+  }
+  else if (pageTitle === "Honors Modern Topics in CS Projects"){
+    projDetails = modernTopics;
+  }
+  
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const [selectedProj, setSelected] = useState(projDetails[0].projName);
+
+  const options = []
+
+  for(var i = 0; i < projDetails.length; i++ ){
+    options.push(<option key={i} value={projDetails[i].projName}>{projDetails[i].projName}</option>)
+  }
+  
+  console.log(options)
+  
   return (
     <div className={ProjectsCss.wholepage}>
       <div className={ProjectsCss.top}>
-        <h1 className={ProjectsCss.title}>Honors AI Projects</h1>
-        <button className={ProjectsCss.courseButton}>Course Description</button>
+        <h1 className={ProjectsCss.title}>{pageTitle}</h1>
+        <button
+          onClick={() => {
+            scrollToBottom();
+          }}
+          className={ProjectsCss.courseButton}
+        >
+          {pageDescriptionName}
+        </button>
       </div>
       <div className={ProjectsCss.projectHeading}>
-        <h2 className={ProjectsCss.projectName}>Assignment 41. Gridworld</h2>
+        <h2 className={ProjectsCss.projectName}>{selectedProj}</h2>
         <select
           className={ProjectsCss.projectList}
           name="projectlist"
           id="projectlist"
+          value={selectedProj}
+          onChange={(e) => {
+            setSelected(e.target.value);
+          }}
         >
-          <option value="">01. Gridworld</option>
-          <option value="">02. Pathfinding</option>
-          <option value="">03. Hello World</option>
-          <option value="">04. Game of Life</option>
+          {options}
+          {/* <option value="01. Gridworld">01. Gridworld</option>
+          <option value="02. Pathfinding">02. Pathfinding</option>
+          <option value="03. Hello World">03. Hello World</option>
+          <option value="04. Game of Life">04. Game of Life</option> */}
         </select>
       </div>
-      <Grid container spacing={3} className={ProjectsCss.projectInfo}>
-        <Grid item xs={12} className={ProjectsCss.projectDescription}>
-          <div className={ProjectsCss.blockTitle}>Project Description:</div>
-          <div className={ProjectsCss.descriptionSection}>
-            <div className={ProjectsCss.descriptionImage}></div>
-            <div className={ProjectsCss.projectDescriptionText}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={6} className={ProjectsCss.verticalBlock}>
-          <div>
-            <div className={ProjectsCss.blockTitle}>What I learned:</div>
-            <div className={ProjectsCss.verticalSection}>
-              <div className={ProjectsCss.projectDescriptionText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </div>
-              <div className={ProjectsCss.verticalImage}></div>
-              <div className={ProjectsCss.projectDescriptionText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </div>
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={6} className={ProjectsCss.verticalBlock}>
-          <div>
-            <div className={ProjectsCss.blockTitle}>Challenges I faced:</div>
-            <div className={ProjectsCss.verticalSection}>
-              <div className={ProjectsCss.projectDescriptionText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </div>
-              <div className={ProjectsCss.verticalImage}></div>
-              <div className={ProjectsCss.projectDescriptionText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </div>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
+      <ProjectDetails 
+        projectName = {selectedProj}
+        dictionary={projDetails.find(element=>element.projName === selectedProj)}
+        
+      />
+      
+
+      <div ref={messagesEndRef} />
       <footer className={ProjectsCss.courseFooter}>
         <h2 className={ProjectsCss.courseDescriptionTitle}>
-          Course Description
+          {pageDescriptionName}
         </h2>
         <div className={ProjectsCss.courseDescription}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          {pageDescriptionText}
         </div>
       </footer>
     </div>

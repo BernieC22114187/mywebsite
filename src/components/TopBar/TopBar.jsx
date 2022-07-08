@@ -5,27 +5,32 @@ import { useNavigate } from "react-router-dom";
 import TopBarCss from "./TopBar.module.css";
 const TopBar = () => {
   let navigate = useNavigate();
-  const [selectedTab, setSelected] = useState("projects");
+  const [selectedTab, setSelected] = useState("aiprojects");
 
   return (
     <div className={TopBarCss.topbar}>
       <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
 
       <div className={TopBarCss.rightSide}>
-        <div
-          className={
-            selectedTab === "projects"
-              ? TopBarCss.ButtonSelected
-              : TopBarCss.ButtonUnselected
-          }
-          onClick={() => {
-            navigate("/projects");
-            setSelected("projects");
-          }}
-        >
-          <div>Projects</div>
+        <div className={TopBarCss.dropdown}>
+          <button
+            className={
+              selectedTab.search("project") != -1
+              ? TopBarCss.dropbtnSelected
+              : TopBarCss.dropbtn
+            }
+            
+          >
+            Projects
+          </button>
+
+          <div className={TopBarCss.dropdownContent}>
+            <a  href="/aiprojects">Honors AI Projects</a>
+            <a href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
+          </div>
         </div>
-        <div
+
+        <button
           className={
             selectedTab === "experience"
               ? TopBarCss.ButtonSelected
@@ -37,8 +42,8 @@ const TopBar = () => {
           }}
         >
           <div>Coding Experience</div>
-        </div>
-        <div
+        </button>
+        <button
           className={
             selectedTab === "aboutme"
               ? TopBarCss.ButtonSelected
@@ -50,7 +55,7 @@ const TopBar = () => {
           }}
         >
           <div>About Me</div>
-        </div>
+        </button>
       </div>
     </div>
   );
