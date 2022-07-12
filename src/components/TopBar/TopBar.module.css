@@ -96,6 +96,12 @@
   display: block;
 }
 
+.dropdowncontainer{
+  display: flex;
+  align-items: center;
+
+}
+
 /* Change color of dropdown links on hover */
 .dropdownContent a:hover {background-color: #ddd;}
 

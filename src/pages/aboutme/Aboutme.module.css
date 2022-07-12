@@ -1,0 +1,14 @@
+.image{
+    height: 400px !important;
+    width: 800px !important;
+}
+.carousel{
+    margin-top: 10vh;
+}
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?w=2000")
+}

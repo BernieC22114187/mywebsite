@@ -51,10 +51,7 @@ const Projects = ({pageTitle, pageDescriptionName, pageDescriptionText}) => {
           }}
         >
           {options}
-          {/* <option value="01. Gridworld">01. Gridworld</option>
-          <option value="02. Pathfinding">02. Pathfinding</option>
-          <option value="03. Hello World">03. Hello World</option>
-          <option value="04. Game of Life">04. Game of Life</option> */}
+          
         </select>
       </div>
       <ProjectDetails 

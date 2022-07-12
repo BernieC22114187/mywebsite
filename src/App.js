@@ -1,5 +1,5 @@
 import "./App.css";
-import OutlinedCard from "./components/Card/card.jsx";
+
 import { AppBar, Typography, Button } from "@mui/material";
 import {
   BrowserRouter,
@@ -11,6 +11,7 @@ import {
 
 import Projects from "./pages/projectpages/Projects.jsx";
 import TopBar from "./components/TopBar/TopBar.jsx";
+import Aboutme from "./pages/aboutme/Aboutme.jsx";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         </header>
         <div className="body">
           <Routes>
+            <Route path="/aboutme" element={<Aboutme/>} />
             <Route
               path="/aiprojects"
               element={

@@ -12,23 +12,26 @@ const TopBar = () => {
       <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
 
       <div className={TopBarCss.rightSide}>
-        <div className={TopBarCss.dropdown}>
-          <button
-            className={
-              selectedTab.search("project") != -1
-              ? TopBarCss.dropbtnSelected
-              : TopBarCss.dropbtn
-            }
-            
-          >
-            Projects
-          </button>
+        <div className = {TopBarCss.dropdowncontainer}>
+          <div className={TopBarCss.dropdown}>
+            <button
+              className={
+                selectedTab.search("project") != -1
+                ? TopBarCss.dropbtnSelected
+                : TopBarCss.dropbtn
+              }
+              
+            >
+              Projects
+            </button>
 
-          <div className={TopBarCss.dropdownContent}>
-            <a  href="/aiprojects">Honors AI Projects</a>
-            <a href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
+            <div className={TopBarCss.dropdownContent}>
+              <a  href="/aiprojects">Honors AI Projects</a>
+              <a href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
+            </div>
           </div>
         </div>
+        
 
         <button
           className={
