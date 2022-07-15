@@ -1,0 +1,58 @@
+.wholepage {
+  z-index: 1;
+}
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 377px;
+    top: 648px;
+    animation-name: bloom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    background: rgba(168, 218, 220, 0.5);
+
+}
+.fullBubble {
+  border-radius: 50%;
+  position: absolute;
+  width: 896px;
+  height: 896px;
+  left: 8px;
+  top: 128px;
+
+  background: rgba(168, 218, 220, 0.5);
+  animation-name: bloom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+ 
+  /* animation-direction: normal; */
+}
+@keyframes bloom {
+  from {
+    border-radius: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 377px;
+    top: 648px;
+  
+    background: rgba(168, 218, 220, 0.5);
+
+  }
+  to {
+    border-radius: 50%;
+    position: absolute;
+    width: 896px;
+    height: 896px;
+    left: 8px;
+    top: 128px;
+    background: rgba(168, 218, 220, 0.5);
+  }
+}
+
+

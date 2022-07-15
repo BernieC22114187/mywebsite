@@ -1,14 +1,172 @@
-.image{
-    height: 400px !important;
-    width: 800px !important;
+.image {
+  height: 88vh;
+  width: 101vw;
+  opacity: 0.9;
 }
-.carousel{
-    margin-top: 10vh;
+.wholepage {
+  background-color: #3f3f3f;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  z-index: 1;
 }
-.page1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-image: url("https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?w=2000")
+.carousel {
+  width: 100vw;
+  height: 90vh;
+}
+.wrapper {
+  position: relative;
+  background: #264653;
+}
+.hobbySection .eduSection .moreSection .contactSection {
+  position: absolute;
+  top: 0;
+}
+.eduTitle {
+  position: absolute;
+  width: 16.4vw;
+  height: 0.08vh;
+  left: 8vw;
+  top: 14vh;
+
+  font-family: "Poly";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.646vw;
+  line-height: 4.4vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.eduDescription {
+  position: absolute;
+  width: 79vw;
+  height: 40vh;
+  left: 11vw;
+  top: 26vh;
+  text-align: left;
+  font-family: "Poly";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.083vw;
+  line-height: 48px;
+
+  color: #ffffff;
+}
+.hobbyTitle {
+  position: absolute;
+  width: 33.8vw;
+  height: 11.3vh;
+  left: 33vw;
+  top: 6.7vh;
+
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.646vw;
+  line-height: 11.3vh;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.hobbyDescription {
+  position: absolute;
+  width: 78.9vw;
+  height: 35.4vh;
+  left: 10.5vw;
+  top: 27.3vh;
+
+  font-family: "Yellowtail";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.744vw;
+  line-height: 6.6vh;
+  text-align: center;
+
+  color: #ffffff;
+}
+.esports {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.402vw;
+}
+.moreTitle {
+  position: absolute;
+  width: 35.4vw;
+  height: 12.2vh;
+  left: 37.3vw;
+  top: 5.4vh;
+
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.906vw;
+  line-height: 12.2vh;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.moreDescription {
+  position: absolute;
+  width: 78.9vw;
+  height: 43.1vh;
+  left: 10.5vw;
+  top: 24.9vh;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.083vw;
+  line-height: 6.5vh;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.contactTitle {
+  position: absolute;
+  width: 29.7vw;
+  height: 9.9vh;
+  left: 35.2vw;
+  top: 6.8vh;
+
+  font-family: "Poly";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 4.888vw;
+  line-height: 9.9vh;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.contactDescription{
+  position: absolute;
+width: 78.9vw;
+height: 43.1vh;
+left: 10.5vw;
+top: 22.1vh;
+
+font-family: 'Roboto';
+font-style: italic;
+font-weight: 400;
+font-size:  2.544vw;
+line-height: 6vh;
+text-align: center;
+
+color: #FFFFFF;
+}
+.linkedin{
+  color: white;
 }

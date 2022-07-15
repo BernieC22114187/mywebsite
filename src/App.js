@@ -12,15 +12,22 @@ import {
 import Projects from "./pages/projectpages/Projects.jsx";
 import TopBar from "./components/TopBar/TopBar.jsx";
 import Aboutme from "./pages/aboutme/Aboutme.jsx";
+import Experience from "./pages/experience/Experience.jsx"
+
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
-        <header className="header">
+        <header id = "header" className="header">
           <TopBar />
         </header>
+        {/* <script>
+          var clientHeight = document.getElementByID('header').clientHeight;
+        </script> */}
         <div className="body">
           <Routes>
+            <Route path="/experience" element={<Experience/>}/>
             <Route path="/aboutme" element={<Aboutme/>} />
             <Route
               path="/aiprojects"
