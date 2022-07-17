@@ -1,57 +1,95 @@
 .wholepage {
+  /* z-index: 1; */
+}
+.background {
   z-index: 1;
 }
-.bubble {
-    border-radius: 50%;
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    left: 377px;
-    top: 648px;
-    animation-name: bloom;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-    background: rgba(168, 218, 220, 0.5);
-
+.mainContent {
+  z-index: 2;
 }
-.fullBubble {
+.backgroundBubble {
+  background-color: #cbcbcb;
+  border-radius: 50%;
+  opacity: 30%;
+}
+
+.bubble {
   border-radius: 50%;
   position: absolute;
-  width: 896px;
-  height: 896px;
-  left: 8px;
-  top: 128px;
 
   background: rgba(168, 218, 220, 0.5);
-  animation-name: bloom;
-  animation-duration: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: shrink;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
- 
-  /* animation-direction: normal; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullBubble {
+  animation-name: bloom;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @keyframes bloom {
   from {
     border-radius: 50%;
     position: absolute;
-    width: 250px;
-    height: 250px;
-    left: 377px;
-    top: 648px;
-  
-    background: rgba(168, 218, 220, 0.5);
+    width: 13vw;
+    height: 13vw;
+    left: 10vw;
+    top: 40vh;
 
+    background: rgba(168, 218, 220, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   to {
     border-radius: 50%;
     position: absolute;
-    width: 896px;
-    height: 896px;
-    left: 8px;
-    top: 128px;
+    width: 46.66vw;
+    height: 46.66vw;
+    left: 0px;
+    top: 30vh;
     background: rgba(168, 218, 220, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@keyframes shrink {
+  from {
+    border-radius: 50%;
+    position: absolute;
+    width: 46.66vw;
+    height: 46.66vw;
+    left: 0px;
+    top: 30vh;
+    background: rgba(168, 218, 220, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  to {
+    border-radius: 50%;
+    position: absolute;
+    width: 13vw;
+    height: 13vw;
+    left: 10vw;
+    top: 40vh;
+
+    background: rgba(168, 218, 220, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

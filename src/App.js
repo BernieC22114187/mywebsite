@@ -15,8 +15,9 @@ import Aboutme from "./pages/aboutme/Aboutme.jsx";
 import Experience from "./pages/experience/Experience.jsx"
 
 function App() {
-  
+  // mac screen 1512 x 982
   return (
+    
     <div className="App">
       <BrowserRouter>
         <header id = "header" className="header">
@@ -61,6 +62,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+
     </div>
   );
 }
