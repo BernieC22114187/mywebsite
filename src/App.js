@@ -13,6 +13,7 @@ import Projects from "./pages/projectpages/Projects.jsx";
 import TopBar from "./components/TopBar/TopBar.jsx";
 import Aboutme from "./pages/aboutme/Aboutme.jsx";
 import Experience from "./pages/experience/Experience.jsx"
+import Landing from "./pages/landingpage/Landing.jsx"
 
 function App() {
   // mac screen 1512 x 982
@@ -28,6 +29,7 @@ function App() {
         </script> */}
         <div className="body">
           <Routes>
+            <Route path="/home" element={<Landing/>}/>
             <Route path="/experience" element={<Experience/>}/>
             <Route path="/aboutme" element={<Aboutme/>} />
             <Route

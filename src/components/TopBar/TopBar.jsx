@@ -3,20 +3,35 @@ import { React, useState } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import TopBarCss from "./TopBar.module.css";
+
 const TopBar = () => {
   let navigate = useNavigate();
   const [selectedTab, setSelected] = useState("aiprojects");
-
+  console.log(selectedTab)
   return (
     <div className={TopBarCss.topbar}>
-      <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
+      <button
+          className={
+            selectedTab === "home"
+              ? TopBarCss.homeSelected
+              : TopBarCss.homeUnselected
+          }
+          onClick={() => {
+            navigate("/home");
+            setSelected("home");
+          }}
+        >
+          <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
+        </button>
+      
 
       <div className={TopBarCss.rightSide}>
         <div className = {TopBarCss.dropdowncontainer}>
           <div className={TopBarCss.dropdown}>
             <button
               className={
-                selectedTab.search("project") != -1
+                
+                selectedTab.search("projects") != -1
                 ? TopBarCss.dropbtnSelected
                 : TopBarCss.dropbtn
               }
@@ -26,8 +41,14 @@ const TopBar = () => {
             </button>
 
             <div className={TopBarCss.dropdownContent}>
-              <a  href="/aiprojects">Honors AI Projects</a>
-              <a href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
+              <a  onClick={() => {
+                setSelected("aiprojects");
+                }}
+                href="/aiprojects">Honors AI Projects</a>
+              <a onClick={() => {
+                setSelected("moderntopicsprojects");
+                }}
+                href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
             </div>
           </div>
         </div>
