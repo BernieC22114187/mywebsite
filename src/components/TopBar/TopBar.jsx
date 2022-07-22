@@ -6,8 +6,8 @@ import TopBarCss from "./TopBar.module.css";
 
 const TopBar = () => {
   let navigate = useNavigate();
-  const [selectedTab, setSelected] = useState("aiprojects");
-  console.log(selectedTab)
+  const [selectedTab, setSelected] = useState("projects");
+  
   return (
     <div className={TopBarCss.topbar}>
       <button
@@ -42,11 +42,15 @@ const TopBar = () => {
 
             <div className={TopBarCss.dropdownContent}>
               <a  onClick={() => {
+                
                 setSelected("aiprojects");
+                
                 }}
                 href="/aiprojects">Honors AI Projects</a>
               <a onClick={() => {
+                
                 setSelected("moderntopicsprojects");
+                
                 }}
                 href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
             </div>

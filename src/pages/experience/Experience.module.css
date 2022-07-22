@@ -5,7 +5,7 @@
   z-index: 1;
 }
 .mainContent {
-  height: 90vh !important;
+  height: 80vh !important;
   overflow: hidden;
   z-index: 2;
 }
@@ -33,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow:hidden;
 }
 @keyframes blueBloom {
   from {
@@ -59,6 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
   }
 }
 @keyframes blueShrink {
