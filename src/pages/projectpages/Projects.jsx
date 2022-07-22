@@ -24,7 +24,7 @@ const Projects = ({pageTitle, pageDescriptionName, pageDescriptionText}) => {
     options.push(<option key={i} value={projDetails[i].projName}>{projDetails[i].projName}</option>)
   }
   
-  console.log(options)
+
   
   return (
     <div className={ProjectsCss.wholepage}>
