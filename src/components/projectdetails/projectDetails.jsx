@@ -1,15 +1,13 @@
 import React from "react";
-import ProjectsCss from "./projectDetails.module.css"
+import ProjectsCss from "./projectDetails.module.css";
 import Grid from "@mui/material/Grid";
-export function ProjectDetails ({projectName,
-    dictionary}){
-    
-  
+export function ProjectDetails({ projectName, dictionary }) {
+  console.log("In detail", projectName, dictionary);
   const projDescText2 = dictionary.projDescText;
-  
+
   const projLearn = dictionary.projLearn;
   const projChallenge = dictionary.projChallenge;
-  
+
   return (
     <div>
       <Grid container spacing={3} className={ProjectsCss.projectInfo}>
@@ -26,7 +24,7 @@ export function ProjectDetails ({projectName,
           <div className={ProjectsCss.blockTitle}>Challenges I faced:</div>
           <div className={ProjectsCss.verticalSection}>
             <div className={ProjectsCss.projectDescriptionText}>
-                {projChallenge}
+              {projChallenge}
             </div>
             <div className={ProjectsCss.verticalImage}></div>
             <div className={ProjectsCss.projectDescriptionText}>
