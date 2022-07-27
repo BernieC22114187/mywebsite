@@ -6,11 +6,11 @@
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
     
 }
 .title{
-    font-size: 85px;
+    font-size: 5.622vw;
     color: white;
     font-family: "Yellowtail";
     margin-bottom: 1vh;
@@ -20,7 +20,7 @@
     height: 5vh;
     background-color: #FF9E00;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.190vw;
     border-radius: 10px;
     font-family: "Poppins";
     
@@ -64,7 +64,7 @@
 .courseDescriptionTitle{
     height: 20%;
     width: 375px;
-    font-size: 40px;
+    font-size:  40px;
     border-radius: 10px;
     margin-bottom: -25px;
     font-weight: 600;
@@ -81,5 +81,6 @@
     /* height: 80%; */
     padding:40px 40px;
     text-align: left;
+    line-height: 1.6;
     
 }

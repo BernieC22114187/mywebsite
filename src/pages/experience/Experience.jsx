@@ -67,7 +67,8 @@ orangeBubbleText.push(<div>
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      In 2021, I developed a custom nutrition/health mobile app with React Native for my high school community. It was my first experience with frontend development and played with React Native elements and CSS styles. I also learned how to fetch apis from the frontend to connect with my backend. 
+      In 2022, I explored web development with ReactJS, CSS, and HTML. I worked on two projects, my coding portfolio website and an in-progress platform for note-sharing between students. My portfolio website allowed me to explore CSS animations in depth and built my ReactJS and HTML foundations. The note-sharing platform allowed me to dive deeper into ReactJS frameworks, flexible HTML/CSS, and more complicated fetches with the backend api. 
     </div>
 
 </div>)
@@ -92,7 +93,7 @@ orangeBubbleText.push(<div>
         fontWeight: "700",
       }}
     >
-      React Native <br/> HTML <br/> CSS <br/> Reactjs <br/>
+      React Native <br/> HTML <br/> CSS <br/> ReactJS <br/>
     </div>
 </div>);
 
@@ -119,7 +120,8 @@ yellowBubbleText.push(<div>
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      In 2021, I used Django frameworks in Python to setup the backend for my nutrition/health mobile app. I learned about backend organization such as models, serializers, views, urls, and GET/POST/PUT/DElETE requests. I stored and organized each student's daily intake/exercise to MongoDB and calculated personalized suggestions for the user. 
+      In 2022, our team used FastAPI as our backend framework and SQL for storing data. I learned about FastAPI frameworks and backend topics such as tokens and authentication. 
     </div>
 
 </div>)
@@ -145,7 +147,7 @@ yellowBubbleText.push(<div>
         fontWeight: "700",
       }}
     >
-      Fastapi <br/> Django <br/> MongoDB <br/> SQL <br/>
+      Django <br/> MongoDB <br/> FastAPI <br/> SQL <br/>
     </div>
 </div>);
 const brownBubbleText = [];
@@ -159,7 +161,7 @@ brownBubbleText.push(<div style ={{marginLeft: "1vw", display: "flex", flexDirec
         fontWeight: "700",
       }}
     >
-      General Info
+      General
     </div>
     <div
       style={{
@@ -172,7 +174,7 @@ brownBubbleText.push(<div style ={{marginLeft: "1vw", display: "flex", flexDirec
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      In middle school, I started learning some Java and C++ and gradually started doing problem-solving exercises in both languages on sites such as UVA online judge, HackerRank, Leetcode, and CodingBat. In freshman year high school 2018, I strengthened my Java fundamentals with AP Computer Science earning a 5. In junior year 2020, I started learning Python and graphic libraries in Java in the Honors Artificial Inteliigence course. Pygame,StdDraw, Java Swing Then I took more CS courses and worked on my own projects in Python: webcrawling with Selenium, Tensorflow, Keras, scipy, sympy, matplotlib, and vpython. Senior year, I learned Simulink for constructing gates and simulating quantum algorithms, Grover's and Simon's. I also used MATLAB for linear algebra, data visualization, and simple neural networks. 
     </div>
 
 </div>)
