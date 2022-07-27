@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Projects from "./pages/projectpages/Projects.jsx";
 import TopBar from "./components/TopBar/TopBar.jsx";
@@ -26,6 +26,7 @@ function App() {
             <Route path="/project">
               <Route path=":pageTitle" element={<Projects />} />
             </Route>
+            <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </div>
       </BrowserRouter>
