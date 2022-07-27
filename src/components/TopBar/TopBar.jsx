@@ -6,59 +6,57 @@ import TopBarCss from "./TopBar.module.css";
 
 const TopBar = () => {
   let navigate = useNavigate();
-  const [selectedTab, setSelected] = useState("home");
-
+  const [selectedTab, setSelected] = useState("projects");
+  
   return (
     <div className={TopBarCss.topbar}>
       <button
-        className={
-          selectedTab === "home"
-            ? TopBarCss.homeSelected
-            : TopBarCss.homeUnselected
-        }
-        onClick={() => {
-          navigate("/home");
-          setSelected("home");
-        }}
-      >
-        <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
-      </button>
+          className={
+            selectedTab === "home"
+              ? TopBarCss.homeSelected
+              : TopBarCss.homeUnselected
+          }
+          onClick={() => {
+            navigate("/home");
+            setSelected("home");
+          }}
+        >
+          <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
+        </button>
+      
 
       <div className={TopBarCss.rightSide}>
-        <div className={TopBarCss.dropdowncontainer}>
+        <div className = {TopBarCss.dropdowncontainer}>
           <div className={TopBarCss.dropdown}>
             <button
               className={
-                selectedTab.search("projects") !== -1
-                  ? TopBarCss.dropbtnSelected
-                  : TopBarCss.dropbtn
+                
+                selectedTab.search("projects") != -1
+                ? TopBarCss.dropbtnSelected
+                : TopBarCss.dropbtn
               }
+              
             >
               Projects
             </button>
 
             <div className={TopBarCss.dropdownContent}>
-              <button
-                className={TopBarCss.dropdownBtn}
-                onClick={() => {
-                  navigate("/aiprojects");
-                  setSelected("aiprojects");
+              <a  onClick={() => {
+                
+                setSelected("aiprojects");
+                
                 }}
-              >
-                Honors AI Projects
-              </button>
-              <button
-                className={TopBarCss.dropdownBtn}
-                onClick={() => {
-                  navigate("/moderntopicsprojects");
-                  setSelected("moderntopicsprojects");
+                href="/aiprojects">Honors AI Projects</a>
+              <a onClick={() => {
+                
+                setSelected("moderntopicsprojects");
+                
                 }}
-              >
-                Honors Modern Topics in CS Projects
-              </button>
+                href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
             </div>
           </div>
         </div>
+        
 
         <button
           className={
