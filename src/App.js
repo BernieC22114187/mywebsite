@@ -7,6 +7,7 @@ import {
   Route,
   Link,
   useNavigate,
+  Navigate,
 } from "react-router-dom";
 
 import Projects from "./pages/projectpages/Projects.jsx";
@@ -32,7 +33,11 @@ function App() {
             <Route path="/home" element={<Landing/>}/>
             <Route path="/experience" element={<Experience/>}/>
             <Route path="/aboutme" element={<Aboutme/>} />
-            <Route
+            <Route path="/project">
+              <Route path=":pageTitle" element={<Projects/>}/>
+            </Route>
+            <Route path="*" element={<Navigate to = "/home" replace />}/>
+            {/* <Route
               path="/aiprojects"
               element={
                 <Projects
@@ -60,7 +65,7 @@ function App() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus et purus at egestas. Cras at placerat sem. In non erat purus. Mauris non porttitor ligula. Nam pharetra, tortor ac pulvinar sollicitudin, urna leo condimentum augue, eget dignissim nibh arcu et erat. Ut accumsan sodales nunc, vel pellentesque est pretium pretium. Cras consequat nisi est, eu dapibus ligula faucibus vel. Fusce est diam, aliquet ut lacus eu, sodales laoreet tortor. Donec non felis pharetra, cursus massa et, sollicitudin magna. Cras vel elit egestas, porta nisi convallis, vulputate erat. Curabitur mollis, quam ac blandit vestibulum, velit felis malesuada lectus, non sagittis sapien sem quis nisl. Cras ut lacinia ante, sed imperdiet urna. Quisque efficitur commodo interdum. Suspendisse ac auctor velit, et accumsan lectus. Praesent condimentum mattis vehicula. Aliquam congue finibus magna at sodales."
                 />
               }
-            />
+            /> */}
           </Routes>
         </div>
       </BrowserRouter>

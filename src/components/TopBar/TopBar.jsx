@@ -6,7 +6,7 @@ import TopBarCss from "./TopBar.module.css";
 
 const TopBar = () => {
   let navigate = useNavigate();
-  const [selectedTab, setSelected] = useState("projects");
+  const [selectedTab, setSelected] = useState("home");
   
   return (
     <div className={TopBarCss.topbar}>
@@ -31,7 +31,7 @@ const TopBar = () => {
             <button
               className={
                 
-                selectedTab.search("projects") != -1
+                selectedTab === "project"
                 ? TopBarCss.dropbtnSelected
                 : TopBarCss.dropbtn
               }
@@ -41,18 +41,18 @@ const TopBar = () => {
             </button>
 
             <div className={TopBarCss.dropdownContent}>
-              <a  onClick={() => {
-                
-                setSelected("aiprojects");
-                
-                }}
-                href="/aiprojects">Honors AI Projects</a>
-              <a onClick={() => {
-                
-                setSelected("moderntopicsprojects");
+              <button  className={TopBarCss.dropdownbtn} onClick={() => {
+                navigate("/project/aiProjects");
+                setSelected("project");
                 
                 }}
-                href="/moderntopicsprojects">Honors Modern Topics in CS Projects</a>
+                >Honors AI Projects</button>
+              <button className={TopBarCss.dropdownbtn} onClick={() => {
+                navigate("/project/modernTopics");
+                setSelected("project");
+                
+                }}
+                >Honors Modern Topics in CS Projects</button>
             </div>
           </div>
         </div>

@@ -1,5 +1,12 @@
 .wholepage {
-  
+  height: -webkit-calc(100vh - 50px);
+
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+
+
+
 }
 .background {
   z-index: 1;
