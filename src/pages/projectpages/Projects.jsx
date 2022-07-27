@@ -2,33 +2,35 @@ import React, { useRef, useState } from "react";
 import ProjectsCss from "./Projects.module.css";
 import Grid from "@mui/material/Grid";
 import ProjectDetails from "../../components/projectdetails/projectDetails.jsx";
-import {aiProjects, modernTopics} from "../../components/projectDictionaries";
-const Projects = ({pageTitle, pageDescriptionName, pageDescriptionText}) => {
+import { aiProjects, modernTopics } from "../../components/projectDictionaries";
+const Projects = ({ pageTitle, pageDescriptionName, pageDescriptionText }) => {
   var projDetails = [];
-  if (pageTitle === "Honors AI Projects"){
+  var selectedProj = "";
+  if (pageTitle === "Honors AI Projects") {
     projDetails = aiProjects;
-  }
-  else if (pageTitle === "Honors Modern Topics in CS Projects"){
+    selectedProj = projDetails[0].projName;
+  } else if (pageTitle === "Honors Modern Topics in CS Projects") {
     projDetails = modernTopics;
+    selectedProj = projDetails[0].projName;
   }
-  
+
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  const [selectedProj, setSelected] = useState(projDetails[0].projName);
 
-  const options = []
+  const options = [];
 
-  for(var i = 0; i < projDetails.length; i++ ){
-    options.push(<option key={i} value={projDetails[i].projName}>{projDetails[i].projName}</option>)
+  for (var i = 0; i < projDetails.length; i++) {
+    options.push(
+      <option key={i} value={projDetails[i].projName}>
+        {projDetails[i].projName}
+      </option>
+    );
   }
-  
 
-  
   return (
     <div className={ProjectsCss.wholepage}>
-      
       <div className={ProjectsCss.top}>
         <h1 className={ProjectsCss.title}>{pageTitle}</h1>
         <button
@@ -48,19 +50,18 @@ const Projects = ({pageTitle, pageDescriptionName, pageDescriptionText}) => {
           id="projectlist"
           value={selectedProj}
           onChange={(e) => {
-            setSelected(e.target.value);
+            selectedProj = e.target.value;
           }}
         >
           {options}
-          
         </select>
       </div>
-      <ProjectDetails 
-        projectName = {selectedProj}
-        dictionary={projDetails.find(element=>element.projName === selectedProj)}
-        
+      <ProjectDetails
+        projectName={selectedProj}
+        dictionary={projDetails.find(
+          (element) => element.projName === selectedProj
+        )}
       />
-      
 
       <div ref={messagesEndRef} />
       <footer className={ProjectsCss.courseFooter}>
