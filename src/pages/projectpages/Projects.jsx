@@ -29,35 +29,23 @@ const Projects = () => {
     },
   ];
   const options = [];
-  const [projTitle, setProjTitle] = useState(
-    pageData.find((d) => d.pageTitle === pageTitle).projTitle
-  );
-  const [projDetails, setProgDetails] = useState(
-    pageData.find((d) => d.pageTitle === pageTitle).projDetails
-  );
-  const [pageDescriptionName, setPageDescriptionName] = useState(
-    pageData.find((d) => d.pageTitle === pageTitle).pageDescriptionName
-  );
-  const [pageDescriptionText, setPageDescriptioText] = useState(
-    pageData.find((d) => d.pageTitle === pageTitle).pageDescriptionText
-  );
   const [selectedProj, setSelected] = useState(
     pageData.find((d) => d.pageTitle === pageTitle).projDetails[0].projName
+  );
+  const [selectedProjData, setSelectedProjData] = useState(
+    pageData.find((d) => d.pageTitle === pageTitle)
   );
 
   useEffect(() => {
     const finded = pageData.find((d) => d.pageTitle === pageTitle);
     setSelected(finded.projDetails[0].projName);
-    setProjTitle(finded.projTitle);
-    setProgDetails(finded.projDetails);
-    setPageDescriptionName(finded.pageDescriptionName);
-    setPageDescriptioText(finded.pageDescriptionText);
+    setSelectedProjData(finded);
   }, [pageTitle]);
 
-  for (var i = 0; i < projDetails.length; i++) {
+  for (var i = 0; i < selectedProjData.projDetails.length; i++) {
     options.push(
-      <option key={i} value={projDetails[i].projName}>
-        {projDetails[i].projName}
+      <option key={i} value={selectedProjData.projDetails[i].projName}>
+        {selectedProjData.projDetails[i].projName}
       </option>
     );
   }
@@ -65,14 +53,14 @@ const Projects = () => {
   return (
     <div className={ProjectsCss.wholepage}>
       <div className={ProjectsCss.top}>
-        <h1 className={ProjectsCss.title}>{projTitle}</h1>
+        <h1 className={ProjectsCss.title}>{selectedProjData.projTitle}</h1>
         <button
           onClick={() => {
             scrollToBottom();
           }}
           className={ProjectsCss.courseButton}
         >
-          {pageDescriptionName}
+          {selectedProjData.pageDescriptionName}
         </button>
       </div>
       <div className={ProjectsCss.projectHeading}>
@@ -91,7 +79,7 @@ const Projects = () => {
       </div>
       <ProjectDetails
         projectName={selectedProj}
-        dictionary={projDetails.find(
+        dictionary={selectedProjData.projDetails.find(
           (element) => element.projName === selectedProj
         )}
       />
@@ -99,10 +87,10 @@ const Projects = () => {
       <div ref={messagesEndRef} />
       <footer className={ProjectsCss.courseFooter}>
         <h2 className={ProjectsCss.courseDescriptionTitle}>
-          {pageDescriptionName}
+          {selectedProjData.pageDescriptionName}
         </h2>
         <div className={ProjectsCss.courseDescription}>
-          {pageDescriptionText}
+          {selectedProjData.pageDescriptionText}
         </div>
       </footer>
     </div>
