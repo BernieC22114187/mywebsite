@@ -2,9 +2,7 @@ import React from "react";
 import ProjectsCss from "./projectDetails.module.css";
 import Grid from "@mui/material/Grid";
 export function ProjectDetails({ projectName, dictionary }) {
-  console.log("In detail", projectName, dictionary);
   const projDescText2 = dictionary.projDescText;
-
   const projLearn = dictionary.projLearn;
   const projChallenge = dictionary.projChallenge;
 

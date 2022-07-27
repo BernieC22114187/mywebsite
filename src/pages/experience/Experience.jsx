@@ -1,7 +1,4 @@
-import { OptionUnstyled } from "@mui/base";
-import { flexbox } from "@mui/system";
 import React, { useState } from "react";
-
 import ExperienceCss from "./Experience.module.css";
 const blueBubbleText = [];
 blueBubbleText.push(
@@ -46,13 +43,14 @@ blueBubbleText.push(
   </div>
 );
 const orangeBubbleText = [];
-orangeBubbleText.push(<div>
+orangeBubbleText.push(
+  <div>
     <div
       style={{
         marginTop: "13vh",
         fontSize: "4vw",
         fontFamily: "PT Serif",
-        
+
         fontWeight: "700",
       }}
     >
@@ -67,17 +65,25 @@ orangeBubbleText.push(<div>
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
     </div>
-
-</div>)
-orangeBubbleText.push(<div>
+  </div>
+);
+orangeBubbleText.push(
+  <div>
     <div
       style={{
-        
         fontSize: "2.5vw",
         fontFamily: "PT Serif",
-        
+
         fontWeight: "700",
       }}
     >
@@ -92,18 +98,19 @@ orangeBubbleText.push(<div>
         fontWeight: "700",
       }}
     >
-      React Native <br/> HTML <br/> CSS <br/> Reactjs <br/>
+      React Native <br /> HTML <br /> CSS <br /> Reactjs <br />
     </div>
-</div>);
+  </div>
+);
 
 const yellowBubbleText = [];
-yellowBubbleText.push(<div>
+yellowBubbleText.push(
+  <div>
     <div
       style={{
-        
         fontSize: "3.8vw",
         fontFamily: "PT Serif",
-        
+
         fontWeight: "700",
       }}
     >
@@ -119,17 +126,25 @@ yellowBubbleText.push(<div>
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
     </div>
-
-</div>)
-yellowBubbleText.push(<div>
+  </div>
+);
+yellowBubbleText.push(
+  <div>
     <div
       style={{
-        
         fontSize: "2.7vw",
         fontFamily: "PT Serif",
-        
+
         fontWeight: "700",
       }}
     >
@@ -139,20 +154,29 @@ yellowBubbleText.push(<div>
       style={{
         // marginRight: "5vw",
         marginTop: "1vh",
-        
+
         fontSize: "1.8vw",
         fontFamily: "Lusitana",
         fontWeight: "700",
       }}
     >
-      Fastapi <br/> Django <br/> MongoDB <br/> SQL <br/>
+      Fastapi <br /> Django <br /> MongoDB <br /> SQL <br />
     </div>
-</div>);
+  </div>
+);
 const brownBubbleText = [];
-brownBubbleText.push(<div style ={{marginLeft: "1vw", display: "flex", flexDirection: "column", alignItems: "center",  textAlign: "right"}}>
+brownBubbleText.push(
+  <div
+    style={{
+      marginLeft: "1vw",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "right",
+    }}
+  >
     <div
       style={{
-        
         fontSize: "4vw",
         fontFamily: "PT Serif",
         marginRight: "5vw",
@@ -172,17 +196,24 @@ brownBubbleText.push(<div style ={{marginLeft: "1vw", display: "flex", flexDirec
         fontWeight: "400",
       }}
     >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
     </div>
-
-</div>)
-brownBubbleText.push(<div>
+  </div>
+);
+brownBubbleText.push(
+  <div>
     <div
       style={{
-        
         fontSize: "3.5vw",
         fontFamily: "PT Serif",
-        
         fontWeight: "700",
       }}
     >
@@ -190,23 +221,21 @@ brownBubbleText.push(<div>
     </div>
     <div
       style={{
-        // marginRight: "5vw",
         marginTop: "1vh",
-        
         fontSize: "2vw",
         fontFamily: "Lusitana",
         fontWeight: "700",
       }}
     >
-      Python <br/> Java <br/> C++ <br/> MATLAB <br/>
+      Python <br /> Java <br /> C++ <br /> MATLAB <br />
     </div>
-</div>);
+  </div>
+);
 
 const Experience = () => {
   const [isOpen, setIsOpen] = useState([true, false, false, false]);
   return (
     <div className={ExperienceCss.wholepage}>
-      
       <div className={ExperienceCss.background}>
         <div
           style={{
@@ -222,67 +251,59 @@ const Experience = () => {
       <div className={ExperienceCss.mainContent}>
         <span
           className={
-            isOpen[0] ? ExperienceCss.bluefullBubble : ExperienceCss.bluesmallBubble
+            isOpen[0]
+              ? ExperienceCss.bluefullBubble
+              : ExperienceCss.bluesmallBubble
           }
           onClick={() => {
-            isOpen[0] ? 
-
-            setIsOpen([false, true, false, false]):
-            setIsOpen([true, false, false, false])
+            isOpen[0]
+              ? setIsOpen([false, true, false, false])
+              : setIsOpen([true, false, false, false]);
           }}
         >
-          {isOpen[0]
-            ? 
-              blueBubbleText[0]
-            : blueBubbleText[1]}
+          {isOpen[0] ? blueBubbleText[0] : blueBubbleText[1]}
         </span>
         <span
           className={
-            isOpen[1] ? ExperienceCss.orangefullBubble : ExperienceCss.orangesmallBubble
+            isOpen[1]
+              ? ExperienceCss.orangefullBubble
+              : ExperienceCss.orangesmallBubble
           }
           onClick={() => {
-            isOpen[1] ? 
-
-            setIsOpen([false, false, true, false]):
-            setIsOpen([false, true, false, false])
+            isOpen[1]
+              ? setIsOpen([false, false, true, false])
+              : setIsOpen([false, true, false, false]);
           }}
         >
-          {isOpen[1]
-            ? 
-              orangeBubbleText[0]
-            : orangeBubbleText[1]}
+          {isOpen[1] ? orangeBubbleText[0] : orangeBubbleText[1]}
         </span>
         <span
           className={
-            isOpen[2] ? ExperienceCss.yellowfullBubble : ExperienceCss.yellowsmallBubble
+            isOpen[2]
+              ? ExperienceCss.yellowfullBubble
+              : ExperienceCss.yellowsmallBubble
           }
           onClick={() => {
-            isOpen[2] ? 
-
-            setIsOpen([true, false, false, true]):
-            setIsOpen([false, false, true, false])
+            isOpen[2]
+              ? setIsOpen([true, false, false, true])
+              : setIsOpen([false, false, true, false]);
           }}
         >
-          {isOpen[2]
-            ? 
-              yellowBubbleText[0]
-            : yellowBubbleText[1]}
+          {isOpen[2] ? yellowBubbleText[0] : yellowBubbleText[1]}
         </span>
         <span
           className={
-            isOpen[3] ? ExperienceCss.brownfullBubble : ExperienceCss.brownsmallBubble
+            isOpen[3]
+              ? ExperienceCss.brownfullBubble
+              : ExperienceCss.brownsmallBubble
           }
           onClick={() => {
-            isOpen[3] ? 
-
-            setIsOpen([true, false, false, false]):
-            setIsOpen([true, false, false, true])
+            isOpen[3]
+              ? setIsOpen([true, false, false, false])
+              : setIsOpen([true, false, false, true]);
           }}
         >
-          {isOpen[3]
-            ? 
-              brownBubbleText[0]
-            : brownBubbleText[1]}
+          {isOpen[3] ? brownBubbleText[0] : brownBubbleText[1]}
         </span>
       </div>
     </div>

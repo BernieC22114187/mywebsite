@@ -1,18 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProjectsCss from "./Projects.module.css";
-import Grid from "@mui/material/Grid";
 import ProjectDetails from "../../components/projectdetails/projectDetails.jsx";
 import { aiProjects, modernTopics } from "../../components/projectDictionaries";
 import { useParams } from "react-router-dom";
 
 const Projects = () => {
   let { pageTitle } = useParams();
-
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   const pageData = [
     {
       pageTitle: "aiProjects",
@@ -31,7 +28,7 @@ const Projects = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus et purus at egestas. Cras at placerat sem. In non erat purus. Mauris non porttitor ligula. Nam pharetra, tortor ac pulvinar sollicitudin, urna leo condimentum augue, eget dignissim nibh arcu et erat. Ut accumsan sodales nunc, vel pellentesque est pretium pretium. Cras consequat nisi est, eu dapibus ligula faucibus vel. Fusce est diam, aliquet ut lacus eu, sodales laoreet tortor. Donec non felis pharetra, cursus massa et, sollicitudin magna. Cras vel elit egestas, porta nisi convallis, vulputate erat. Curabitur mollis, quam ac blandit vestibulum, velit felis malesuada lectus, non sagittis sapien sem quis nisl. Cras ut lacinia ante, sed imperdiet urna. Quisque efficitur commodo interdum. Suspendisse ac auctor velit, et accumsan lectus. Praesent condimentum mattis vehicula. Aliquam congue finibus magna at sodales.",
     },
   ];
-
+  const options = [];
   const [projTitle, setProjTitle] = useState(
     pageData.find((d) => d.pageTitle === pageTitle).projTitle
   );
@@ -57,9 +54,6 @@ const Projects = () => {
     setPageDescriptioText(finded.pageDescriptionText);
   }, [pageTitle]);
 
-  const options = [];
-
-  console.log("selectedProj", selectedProj);
   for (var i = 0; i < projDetails.length; i++) {
     options.push(
       <option key={i} value={projDetails[i].projName}>
