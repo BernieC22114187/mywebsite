@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import ExperienceCss from "./Experience.module.css";
 const blueBubbleText = [];
 blueBubbleText.push(
-  <div>
+  <div className={ExperienceCss.blueBubble0}>
     <div
       style={{
         marginRight: "3vw",
@@ -46,10 +46,10 @@ blueBubbleText.push(
   </div>
 );
 const orangeBubbleText = [];
-orangeBubbleText.push(<div>
+orangeBubbleText.push(<div className={ExperienceCss.orangeBubble0}style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
     <div
       style={{
-        marginTop: "13vh",
+        marginTop: "23vh",
         fontSize: "4vw",
         fontFamily: "PT Serif",
         
@@ -60,10 +60,10 @@ orangeBubbleText.push(<div>
     </div>
     <div
       style={{
-        paddingTop: "5vh",
+        paddingTop: "2vh",
         fontSize: "1.2vw",
         fontFamily: "PT Serif",
-        width: "40vw",
+        width: "38vw",
         fontWeight: "400",
       }}
     >
@@ -98,7 +98,7 @@ orangeBubbleText.push(<div>
 </div>);
 
 const yellowBubbleText = [];
-yellowBubbleText.push(<div>
+yellowBubbleText.push(<div className={ExperienceCss.yellowBubble0}>
     <div
       style={{
         
@@ -151,7 +151,7 @@ yellowBubbleText.push(<div>
     </div>
 </div>);
 const brownBubbleText = [];
-brownBubbleText.push(<div style ={{marginLeft: "1vw", display: "flex", flexDirection: "column", alignItems: "center",  textAlign: "right"}}>
+brownBubbleText.push(<div className={ExperienceCss.brownBubble0} style ={{marginLeft: "1vw", display: "flex", flexDirection: "column", alignItems: "center",  textAlign: "right"}}>
     <div
       style={{
         
@@ -204,22 +204,78 @@ brownBubbleText.push(<div>
     </div>
 </div>);
 
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+const backgroundBubbles = []
+  for(var i = 0; i < 15; i++){
+    var t = getRandomArbitrary(0, 100).toString()+"vh";
+    var l = getRandomArbitrary(10,90).toString()+"vw";
+    var size = getRandomArbitrary(1,4).toString()+"vw";
+    
+    backgroundBubbles.push(
+      <div
+          key={i}
+          style={{
+            position: "absolute",
+            width: size,
+            height: size,
+            left: l,
+            top: t,
+          }}
+          className={ExperienceCss.backgroundBubble}
+        />
+    )
+  }
+  for(var i = 0; i < 10; i++){
+    var t = getRandomArbitrary(0, 100).toString()+"vh";
+    var l = getRandomArbitrary(10,90).toString()+"vw";
+    var size = getRandomArbitrary(5,9).toString()+"vw";
+    
+    backgroundBubbles.push(
+      <div
+          key={i}
+          style={{
+            position: "absolute",
+            width: size,
+            height: size,
+            left: l,
+            top: t,
+          }}
+          className={ExperienceCss.backgroundBubble}
+        />
+    )
+  }
+  for(var i = 0; i < 5; i++){
+    var t = getRandomArbitrary(0, 100).toString()+"vh";
+    var l = getRandomArbitrary(10,90).toString()+"vw";
+    var size = getRandomArbitrary(10,15).toString()+"vw";
+   
+    backgroundBubbles.push(
+      <div
+          key={i}
+          style={{
+            position: "absolute",
+            width: size,
+            height: size,
+            left: l,
+            top: t,
+          }}
+          className={ExperienceCss.backgroundBubble}
+        />
+    )
+  }
 const Experience = () => {
   const [isOpen, setIsOpen] = useState([true, false, false, false]);
+  
+  
   return (
     <div className={ExperienceCss.wholepage}>
       
       <div className={ExperienceCss.background}>
-        <div
-          style={{
-            position: "absolute",
-            width: "10vw",
-            height: "10vw",
-            left: "10.37vw",
-            top: "2vh",
-          }}
-          className={ExperienceCss.backgroundBubble}
-        ></div>
+        {backgroundBubbles}
+        
       </div>
       <div className={ExperienceCss.mainContent}>
         <span

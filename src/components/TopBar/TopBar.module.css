@@ -28,6 +28,9 @@
   font-size: 1.042vw;
   border: none;
 }
+.ButtonSelected:hover{
+  cursor: pointer;
+}
 .ButtonUnselected {
   font-weight: 400;
   color: black;
@@ -38,6 +41,9 @@
   font-style: italic;
   font-size: 1.042vw;
   border: none;
+}
+.ButtonUnselected:hover{
+  cursor: pointer;
 }
 
 .title {
@@ -116,13 +122,13 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdownContent .dropdownbtn:hover {background-color: #ddd;}
+.dropdownContent .dropdownbtn:hover {background-color: #ddd;cursor: pointer;}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdownContent {display: block;}
+.dropdown:hover .dropdownContent {display: block;cursor: pointer;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #F0F0F0;}
+.dropdown:hover .dropbtn {background-color: #F0F0F0;cursor: pointer;}
 
 
 
@@ -135,6 +141,10 @@
   border-radius: 5px;
   margin-left: 2vw;
 }
+
+.homeSelected:hover{
+  cursor: pointer;
+}
 .homeUnselected {
   background-color: #F0F0F0;
   
@@ -143,4 +153,7 @@
   border-radius: 5px;
   border: none;
   margin-left: 2vw; 
+}
+.homeUnselected:hover{
+  cursor: pointer;
 }

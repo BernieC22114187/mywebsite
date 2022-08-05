@@ -1,14 +1,15 @@
 .wholepage {
-  height: -webkit-calc(100vh - 50px);
+  height: -webkit-calc(110vh - 50px);
 
   width: 100vw;
   overflow: hidden;
-  position: absolute;
-
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF -18.54%, #dddcdc 100%);
 
 
 }
 .background {
+  
   z-index: 1;
 }
 .mainContent {
@@ -16,7 +17,7 @@
   overflow: hidden;
   z-index: 2;
 }
-.backgroundBubbleLeft {
+.backgroundBubble {
   background-color: #cbcbcb;
   border-radius: 50%;
   opacity: 30%;
@@ -118,9 +119,9 @@
 }
 :root{
   --orangeLeftsmall: 38vw;
-  --orangeTopsmall: 7vh;
+  --orangeTopsmall: 2vh;
   --orangeLeftbig: 20vw;
-  --orangeTopbig: -20vh;
+  --orangeTopbig: -33vh;
 
   --yellowLeftsmall: 46vw;
   --yellowTopsmall: 61vh;
@@ -161,6 +162,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4vh;
+    
+    
   }
 }
 @keyframes orangeShrink {
@@ -175,6 +179,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4vh;
   }
   to {
     border-radius: 50%;
@@ -305,6 +310,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 3vh;
   }
 }
 @keyframes brownShrink {
@@ -319,6 +325,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    padding-top: 3vh;
   }
   to {
     border-radius: 50%;
@@ -332,4 +340,75 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.orangeBubble0{
+  animation-name: orangeText;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes orangeText{
+  from{
+    transform: scale(0.3)
+  }
+  to{
+    transform: scale(1);
+  }
+
+}
+.blueBubble0{
+  animation-name: blueText; 
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes blueText{
+  from{
+    transform: scale(0.5)
+  }
+  to{
+    transform: scale(1);
+  }
+
+}
+
+.yellowBubble0{
+  animation-name: yellowText; 
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes yellowText{
+  from{
+    transform: scale(0.3)
+  }
+  to{
+    transform: scale(1);
+  }
+
+}
+
+.brownBubble0{
+  animation-name: yellowText; 
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes brownText{
+  from{
+    transform: scale(0.7)
+  }
+  to{
+    transform: scale(1);
+  }
+
 }
