@@ -5,11 +5,17 @@ import { aiProjects, modernTopics } from "../../components/projectDictionaries";
 import { useParams } from "react-router-dom";
 
 const Projects = () => {
+  window.scrollTo(0,0);
   let { pageTitle } = useParams();
+  const messagesTopRef = useRef(null);
+  
+  messagesTopRef.current?.scrollIntoView({ behavior: "smooth" });
+  
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  
   const pageData = [
     {
       pageTitle: "aiProjects",
@@ -52,6 +58,7 @@ const Projects = () => {
 
   return (
     <div className={ProjectsCss.wholepage}>
+      <div ref={messagesTopRef} />
       <div className={ProjectsCss.top}>
         <h1 className={ProjectsCss.title}>{selectedProjData.projTitle}</h1>
         <button

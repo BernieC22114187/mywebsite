@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Container } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,6 +10,7 @@ import img3 from "../../components/images/editedTaipei.png";
 import img4 from "../../components/images/deskImage.png";
 
 const Aboutme = () => {
+  useEffect(()=>{window.scrollTo(0,0);},[])
   return (
     <div className={AboutmeCss.wholepage}>
       <Carousel className={AboutmeCss.carousel} showThumbs={false}>

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect, useRef } from "react";
 
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -6,10 +6,21 @@ import TopBarCss from "./TopBar.module.css";
 
 const TopBar = () => {
   let navigate = useNavigate();
-  const [selectedTab, setSelected] = useState("home");
+  const url = window.location.href.split("/")[3];
+  
+  const [selectedTab, setSelected] = useState(url);
+  
+  const refreshPage = () => {
+    window.location.reload()
+    
+
+  }
+  
+  
   
   return (
     <div className={TopBarCss.topbar}>
+      
       <button
           className={
             selectedTab === "home"
@@ -17,8 +28,11 @@ const TopBar = () => {
               : TopBarCss.homeUnselected
           }
           onClick={() => {
+            
             navigate("/home");
             setSelected("home");
+            refreshPage();
+            
           }}
         >
           <h2 className={TopBarCss.title}>BC Coding Portfolio</h2>
@@ -44,13 +58,13 @@ const TopBar = () => {
               <button  className={TopBarCss.dropdownbtn} onClick={() => {
                 navigate("/project/aiProjects");
                 setSelected("project");
-                
+                refreshPage();
                 }}
                 >Honors AI Projects</button>
               <button className={TopBarCss.dropdownbtn} onClick={() => {
                 navigate("/project/modernTopics");
                 setSelected("project");
-                
+                refreshPage();
                 }}
                 >Honors Modern Topics in CS Projects</button>
             </div>
@@ -67,6 +81,7 @@ const TopBar = () => {
           onClick={() => {
             navigate("/experience");
             setSelected("experience");
+            refreshPage();
           }}
         >
           <div>Coding Experience</div>
@@ -80,6 +95,7 @@ const TopBar = () => {
           onClick={() => {
             navigate("/aboutme");
             setSelected("aboutme");
+            refreshPage();
           }}
         >
           <div>About Me</div>

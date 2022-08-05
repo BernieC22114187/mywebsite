@@ -1,6 +1,6 @@
 import { OptionUnstyled } from "@mui/base";
 import { flexbox } from "@mui/system";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import ExperienceCss from "./Experience.module.css";
 const blueBubbleText = [];
@@ -50,7 +50,7 @@ orangeBubbleText.push(<div className={ExperienceCss.orangeBubble0}style={{displa
     <div
       style={{
         marginTop: "23vh",
-        fontSize: "4vw",
+        fontSize: "3.5vw",
         fontFamily: "PT Serif",
         
         fontWeight: "700",
@@ -269,7 +269,7 @@ const backgroundBubbles = []
 const Experience = () => {
   const [isOpen, setIsOpen] = useState([true, false, false, false]);
   
-  
+  window.scrollTo(0,0);
   return (
     <div className={ExperienceCss.wholepage}>
       
