@@ -1,14 +1,5 @@
 import "./App.css";
-
-import { AppBar, Typography, Button } from "@mui/material";
-import {
-  HashRouter,
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  Navigate,
-} from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Projects from "./pages/projectpages/Projects.jsx";
 import TopBar from "./components/TopBar/TopBar.jsx";
@@ -21,7 +12,7 @@ function App() {
   // mac screen 1512 x 982
   return (
     <div className="App">
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <header id="header" className="header">
           <TopBar />
         </header>

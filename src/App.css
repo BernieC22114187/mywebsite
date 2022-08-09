@@ -1,24 +1,16 @@
 .App {
   text-align: center;
- 
 }
 
-.header{
-  
+.header {
   display: flex;
   flex-direction: row;
   position: sticky;
   top: 0px;
   z-index: 2;
   height: 60px;
-  
 }
-.body{
+.body {
   display: flex;
   justify-content: center;
-  
-}
-
-.footer{
-  /*  */
 }
