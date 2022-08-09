@@ -1,90 +1,78 @@
-.projectInfo{
-    width: 75vw !important;
-    margin-bottom: 5vh;
+.projectInfo {
+  width: 75vw !important;
+  margin-bottom: 5vh;
 }
 
-.projectDescription{
-    background-color: #E2E2E2;
-    border-radius: 10px;
-    width: 100%;
-    /* height: 30vh; */
-    display: flex;
-    flex-direction: column!important;
-    align-items: flex-start;
-    padding-left: 20px;
-    padding-right: 25px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    
-
-    
+.projectDescription {
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  width: 100%;
+  /* height: 30vh; */
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 25px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
-.blockTitle{
-    font-family: "Yellowtail";
-    font-size: 1.984vw;
-    height: relative;
-    
+.blockTitle {
+  font-family: "Yellowtail";
+  font-size: 1.984vw;
+  height: relative;
 }
-.descriptionSection{
-    display: flex;
-    width: 100%;
-    flex-direction: row ;
-    margin-top: 20px;
+.descriptionSection {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 20px;
 }
-.descriptionImageContainer{
-   
-    display: flex;
-    flex: 1;
-    
+.descriptionImageContainer {
+  display: flex;
+  flex: 1;
 }
-.Image{
-    width: 100%;
-    height: 100%;
+.Image {
+  width: 100%;
+  height: 100%;
 }
-.projectDescriptionText{
-    display:flex;
-    flex: 1 ;
-    text-align: left;
-    font-size: 20px;
-    font-family: "Poly";
-    margin-left: 2vw;
-    white-space: pre-wrap;
+.projectDescriptionText {
+  display: flex;
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Poly";
+  margin-left: 2vw;
+  white-space: pre-wrap;
 }
 
-.verticalBlock{
-    background-color: #E2E2E2;
-    border-radius: 10px;
-   
-    /* width: 100%; */
-    /* height: 50vh; */
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start;
-    padding-left: 20px;
-    padding-right: 25px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    margin-top: 20px !important;
-    
-    
-    
-    
+.verticalBlock {
+  background-color: #e2e2e2;
+  border-radius: 10px;
+
+  /* width: 100%; */
+  /* height: 50vh; */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 25px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-top: 20px !important;
 }
-.verticalSection{
-    display: flex ;
-    flex-direction:column;
-    
-    margin-top: 20px;
-    /* height: 100%; */
+.verticalSection {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+  /* height: 100%; */
 }
-.verticalImage{
-    width: 100%;
-    
-    margin-top: 3vh;
+.verticalImage {
+  width: 100%;
+
+  margin-top: 3vh;
 }
-.descriptionImageContainer{
-   
-    display: flex;
-    flex: 1;
-    
+.descriptionImageContainer {
+  display: flex;
+  flex: 1;
 }

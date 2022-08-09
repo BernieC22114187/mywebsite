@@ -1,12 +1,10 @@
-import { React, useState, useEffect, useRef } from "react";
-
-import { Button } from "@mui/material";
+import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TopBarCss from "./TopBar.module.css";
 
 const TopBar = () => {
   let navigate = useNavigate();
-  const url = window.location.href.split("/")[4];
+  const url = window.location.href.split("/")[5];
   const [selectedTab, setSelected] = useState(url);
 
   const refreshPage = () => {

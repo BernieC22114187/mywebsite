@@ -1,5 +1,4 @@
-import React, {useEffect} from "react";
-import { Container } from "@mui/material";
+import React, { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import AboutmeCss from "./Aboutme.module.css";
@@ -10,12 +9,14 @@ import img3 from "../../components/images/editedTaipei.png";
 import img4 from "../../components/images/deskImage.png";
 
 const Aboutme = () => {
-  useEffect(()=>{window.scrollTo(0,0);},[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={AboutmeCss.wholepage}>
       <Carousel className={AboutmeCss.carousel} showThumbs={false}>
         <div className={AboutmeCss.wrapper}>
-          <img src={img1} className={AboutmeCss.image} />
+          <img alt="about-img" src={img1} className={AboutmeCss.image} />
           <div className={AboutmeCss.eduSection}>
             <div className={AboutmeCss.eduTitle}>Education</div>
             <div className={AboutmeCss.eduDescription}>
@@ -33,7 +34,7 @@ const Aboutme = () => {
           </div>
         </div>
         <div className={AboutmeCss.wrapper}>
-          <img src={img2} className={AboutmeCss.image} />
+          <img alt="about-img2" src={img2} className={AboutmeCss.image} />
           <div className={AboutmeCss.hobbySection}>
             <div className={AboutmeCss.hobbyTitle}>Hobbies and Interests</div>
             <div className={AboutmeCss.hobbyDescription}>
@@ -51,8 +52,8 @@ const Aboutme = () => {
             </div>
           </div>
         </div>
-        <div className = {AboutmeCss.wrapper}>
-          <img src={img3} className={AboutmeCss.image} />
+        <div className={AboutmeCss.wrapper}>
+          <img alt="about-img3" src={img3} className={AboutmeCss.image} />
           <div className={AboutmeCss.moreSection}>
             <div className={AboutmeCss.moreTitle}>More About me</div>
             <div className={AboutmeCss.moreDescription}>
@@ -69,12 +70,12 @@ const Aboutme = () => {
             </div>
           </div>
         </div>
-        <div className = {AboutmeCss.wrapper}>
-          <img src={img4} className={AboutmeCss.image} />
+        <div className={AboutmeCss.wrapper}>
+          <img alt="about-img4" src={img4} className={AboutmeCss.image} />
           <div className={AboutmeCss.contactSection}>
             <div className={AboutmeCss.contactTitle}>CONTACT ME</div>
             <div className={AboutmeCss.contactDescription}>
-            School Email: bernie.chen@duke.edu
+              School Email: bernie.chen@duke.edu
               <br />
               <br />
               Personal Email: bernie0716@gmail.com
@@ -83,7 +84,13 @@ const Aboutme = () => {
               Phone: (+886) 921-081-823
               <br />
               <br />
-              Linkedin: <a className ={AboutmeCss.linkedin}href="https://www.linkedin.com/in/bernie-chen-244713235">www.linkedin.com/in/bernie-chen-244713235</a>
+              Linkedin:{" "}
+              <a
+                className={AboutmeCss.linkedin}
+                href="https://www.linkedin.com/in/bernie-chen-244713235"
+              >
+                www.linkedin.com/in/bernie-chen-244713235
+              </a>
             </div>
           </div>
         </div>

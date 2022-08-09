@@ -1,80 +1,77 @@
-.wholepage{
-    background: var(--bg-color);
-    height: 95vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+.wholepage {
+  background: var(--bg-color);
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 
-    align-items: center;
-    z-index: 1;
+  align-items: center;
+  z-index: 1;
 }
-:root{
-   --bg-color:  #d7d7d7;
-   --typingSpeed: 2s;
-   --blinkSpeed: 800ms;
-   --introColor: #fca311;
+:root {
+  --bg-color: #d7d7d7;
+  --typingSpeed: 2s;
+  --blinkSpeed: 800ms;
+  --introColor: #fca311;
 }
 
-.intro{
-    margin-top: 20vh;
-    font-family: "Source Code Pro";
-    font-size: 7.646vw;
-    position: relative;
-    color: var(--introColor);
+.intro {
+  margin-top: 20vh;
+  font-family: "Source Code Pro";
+  font-size: 7.646vw;
+  position: relative;
+  color: var(--introColor);
 }
 .intro::before,
-.intro::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-.intro::before{
-    background: var(--bg-color);
-    animation: typewriter var(--typingSpeed) steps(17) 1s forwards;
-    
+.intro::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typingSpeed) steps(17) 1s forwards;
 }
-.intro::after{
-    width: 0.125em;
-    background: var(--introColor);
-    animation: 
-        typewriter var(--typingSpeed) steps(17) 1s forwards,
-        blink var(--blinkSpeed) steps(17) infinite;
+.intro::after {
+  width: 0.125em;
+  background: var(--introColor);
+  animation: typewriter var(--typingSpeed) steps(17) 1s forwards,
+    blink var(--blinkSpeed) steps(17) infinite;
 }
-@keyframes typewriter{
-    to{
-        left: 100%;
-    }
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
 }
 
-@keyframes blink{
-    to{
-        background: transparent;
-    }
+@keyframes blink {
+  to {
+    background: transparent;
+  }
 }
-.subtitle{
-    color: #14213d;
-    font-family: "Poppins";
-    font-size: 3vw;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(3rem);
-    animation: fadeInUp 2s ease calc(var(--typingSpeed) + 1.5s) forwards;
-    margin-bottom: 10vh;
-}
-
-@keyframes fadeInUp{
-    to{
-        opacity: 1;
-        transform: translateY(0); 
-    }
+.subtitle {
+  color: #14213d;
+  font-family: "Poppins";
+  font-size: 3vw;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typingSpeed) + 1.5s) forwards;
+  margin-bottom: 10vh;
 }
 
-.credits{
-    opacity: 0;
-    transform: translateY(3rem);
-    animation: fadeInUp 2s ease calc(var(--typingSpeed) + 3s) forwards;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.credits {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typingSpeed) + 3s) forwards;
 }
